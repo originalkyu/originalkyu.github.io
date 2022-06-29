@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>JooGlory Snapshot</title>
+    <link>https:originalkyu.github.io/</link>
+    <description>Recent content on JooGlory Snapshot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jun 2022 00:58:53 +0900</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jun 2022 13:38:01 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Post1</title>
-      <link>http://example.org/post/post1/</link>
+      <link>https:originalkyu.github.io/post/post1/</link>
       <pubDate>Wed, 29 Jun 2022 00:58:53 +0900</pubDate>
       
-      <guid>http://example.org/post/post1/</guid>
+      <guid>https:originalkyu.github.io/post/post1/</guid>
       <description>This is pos1 </description>
     </item>
     
