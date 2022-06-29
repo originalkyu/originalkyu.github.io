@@ -6,7 +6,25 @@
     <description>Recent content on JooGlory Snapshot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jun 2022 13:38:01 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jun 2022 17:52:55 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review1</title>
+      <link>https:originalkyu.github.io/learn/cpp/review1/</link>
+      <pubDate>Wed, 29 Jun 2022 17:52:01 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/review1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Htmlcss Review1</title>
+      <link>https:originalkyu.github.io/learn/htmlcss/htmlcss-review1/</link>
+      <pubDate>Wed, 29 Jun 2022 15:11:29 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/htmlcss/htmlcss-review1/</guid>
+      <description>HTML과 CSS 복습하기 1 hello hello </description>
+    </item>
+    
     <item>
       <title>Post1</title>
       <link>https:originalkyu.github.io/post/post1/</link>
