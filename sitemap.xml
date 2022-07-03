@@ -2,14 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https:originalkyu.github.io/</loc>
+    <lastmod>2022-07-03T10:18:46+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/javascript/review2/</loc>
+    <lastmod>2022-07-03T10:18:46+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/javascript/review1/</loc>
+    <lastmod>2022-07-03T09:30:39+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/javascript/</loc>
+    <lastmod>2022-07-03T09:30:12+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/passing-arguments/</loc>
+    <lastmod>2022-06-30T13:59:56+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/returning-values/</loc>
+    <lastmod>2022-06-30T12:00:29+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/std-vector/</loc>
+    <lastmod>2022-06-30T11:58:57+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/std-array/</loc>
+    <lastmod>2022-06-30T11:24:22+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/array/</loc>
+    <lastmod>2022-06-30T11:20:14+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/linkage/</loc>
+    <lastmod>2022-06-30T11:06:10+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/for-each/</loc>
+    <lastmod>2022-06-30T11:01:20+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/const/</loc>
+    <lastmod>2022-06-30T10:59:09+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/cpp/reference/</loc>
+    <lastmod>2022-06-30T09:55:04+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/study/</loc>
+    <lastmod>2022-06-29T22:45:10+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/myworks/mywork1/</loc>
+    <lastmod>2022-06-29T18:27:50+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/myworks/</loc>
+    <lastmod>2022-06-29T18:27:42+09:00</lastmod>
+  </url><url>
     <loc>https:originalkyu.github.io/learn/htmlcss/</loc>
     <lastmod>2022-06-29T17:52:55+09:00</lastmod>
-  </url><url>
-    <loc>https:originalkyu.github.io/</loc>
-    <lastmod>2022-06-29T17:52:55+09:00</lastmod>
-  </url><url>
-    <loc>https:originalkyu.github.io/learn/cpp/review1/</loc>
-    <lastmod>2022-06-29T17:52:01+09:00</lastmod>
   </url><url>
     <loc>https:originalkyu.github.io/learn/cpp/</loc>
     <lastmod>2022-06-29T17:46:46+09:00</lastmod>

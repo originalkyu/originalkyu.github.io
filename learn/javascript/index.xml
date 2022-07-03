@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on JooGlory Snapshot</title>
+    <link>https:originalkyu.github.io/learn/javascript/</link>
+    <description>Recent content in Javascript on JooGlory Snapshot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jul 2022 09:30:12 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/learn/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review2</title>
+      <link>https:originalkyu.github.io/learn/javascript/review2/</link>
+      <pubDate>Sun, 03 Jul 2022 10:18:46 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/javascript/review2/</guid>
+      <description>연산자 산술 연산자 숫자 뿐 아니라 문자열도 산술 연산자가 가능하다 하지만 문자열을 + 할 때는 주의핳ㄴ다 document.write(20 + 10); document.write(20 - 10); document.write(20 * 10); document.write(20 / 10); document.write(20 % 10); document.write(&amp;#34;20&amp;#34; + &amp;#34;10&amp;#34;); // 2010 출력되는 것 주의 document.write(&amp;#34;20&amp;#34; - &amp;#34;10&amp;#34;); document.write(&amp;#34;20&amp;#34; * &amp;#34;10&amp;#34;); document.write(&amp;#34;20&amp;#34; / &amp;#34;10&amp;#34;); document.write(&amp;#34;20&amp;#34; % &amp;#34;10&amp;#34;); 증감 연산자 ++num; --num; num++; num--; 비교 연산자 Boolean 데이터 타입인 true 혹은 false를 반환한다 document.writeln(10 == 10); document.writeln(10 === 10); document.</description>
+    </item>
+    
+    <item>
+      <title>Review1</title>
+      <link>https:originalkyu.github.io/learn/javascript/review1/</link>
+      <pubDate>Sun, 03 Jul 2022 09:30:39 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/javascript/review1/</guid>
+      <description>자바스크립트 동적인 웹사이트 제작 시 화면의 변화를 표현하기 위해 사용되는 프로그래밍 언어 이미지 슬라이드 효과, 파업효과 등 하이브리드 앱, 서버 개발 등에 사용된다 다음처럼 script 태그 안에 src 속성값으로 js 파일을 입력하고 html파일과 연동한다 &amp;lt;body&amp;gt; &amp;lt;script src=&amp;#34;index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; 기초 문법 // 1. 변수 선언과 초기화 var fruit; fruit = &amp;#34;apple&amp;#34;; //var 1fruit; // 변수 이름은 숫자로 시작할 수 없다 // 2. 출력하는 함수 console.log(fruit); document.write(fruit); document.writeln(fruit); // 3. 8가지 데이터 타입 /* 1.</description>
+    </item>
+    
+  </channel>
+</rss>

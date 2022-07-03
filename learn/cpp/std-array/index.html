@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+<title>Std Array</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="std::array #include &lt;iostream&gt; #include &lt;array&gt; using namespace std; int main() { // std::array는 정적 배열을 대체할 수 있다. // std::array 선언과 초기화 std::array&lt;int, 5&gt; my_arr = { 1, 2, 3, 4, 5 }; my_arr = { 0, 1, 2, 3, 4 }; my_arr = { 0, 1, 2, }; // 나머지 두 개는 0으로 채워준다. // 이 때, my_arr 은 {0, 1, 2, 0, 0}으로 초기화되어 있다. for (auto element : my_arr) cout &lt;&lt; element &lt;&lt; &#34; &#34;; cout &lt;&lt; endl; // std::array 접근 방법과 기능 cout &lt;&lt; my_arr[0] &lt;&lt; endl; // ok cout &lt;&lt; my_arr.">
+<link rel="canonical" href="https:originalkyu.github.io/learn/cpp/std-array/" />
+
+<link rel="stylesheet" href="/css/originalkyu.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+    <nav class="navbar">
+            <a href="/post/">
+                <img src= "/images/jooglorylogo.png" alt="JooGlory Snapshot logo">
+            </a>
+    </nav>
+</header>
+		<main class="wrapper">
+			
+
+<article>
+    <h2 id="stdarray">std::array</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;array&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// std::array는 정적 배열을 대체할 수 있다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// std::array 선언과 초기화
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	std<span style="color:#f92672">::</span>array<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">5</span><span style="color:#f92672">&gt;</span> my_arr <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span> };
+</span></span><span style="display:flex;"><span>	my_arr <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span> };
+</span></span><span style="display:flex;"><span>	my_arr <span style="color:#f92672">=</span> { <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, }; <span style="color:#75715e">// 나머지 두 개는 0으로 채워준다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 이 때, my_arr 은 {0, 1, 2, 0, 0}으로 초기화되어 있다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> element : my_arr)
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> element <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// std::array 접근 방법과 기능
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	cout <span style="color:#f92672">&lt;&lt;</span> my_arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	cout <span style="color:#f92672">&lt;&lt;</span> my_arr.at(<span style="color:#ae81ff">0</span>) <span style="color:#f92672">&lt;&lt;</span> endl; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> my_arr[<span style="color:#ae81ff">10</span>];   <span style="color:#75715e">// 문제가 있는지 확인하지 않고 바로 액세스
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	cout <span style="color:#f92672">&lt;&lt;</span> my_arr.at(<span style="color:#ae81ff">10</span>);<span style="color:#75715e">// 문제가 있는지 확인하고 액세스
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// element가 몇 개인지 보여준다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	my_arr.size();
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 파라미터로는 다음처럼 넘겨준다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">void</span> printLength(array<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">5</span><span style="color:#f92672">&gt;</span> my_arr) { .., };
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 위 방식은 array가 복사되는 형태이므로 array가 크다면 곤란하다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">void</span> printLength(array<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">5</span><span style="color:#f92672">&gt;&amp;</span> my_arr); <span style="color:#75715e">// 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">void</span> printLength(<span style="color:#66d9ef">const</span> array<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">5</span><span style="color:#f92672">&gt;&amp;</span> my_arr); <span style="color:#75715e">// 전달한 array가 변하지 않길 바랄 때
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div>
+</article>
+
+
+
+		</main>
+		
+		
+	</div>
+</body>
+
+</html>

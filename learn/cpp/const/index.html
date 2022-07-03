@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+<title>Const</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="pointer와 const #include &lt;iostream&gt; using namespace std; int main() { // case 1 const int* : const int 주소를 담을 수 있는 포인터 변수 const int c_value1_1 = 5; int value1_2 = 6; //int* ptr1 = &amp;c_value1_1; // error // int* ptr1은 심볼릭 상수를 가리킬 수 없다 const int* ptr1 = &amp;c_value1_1; // ok //*ptr1 = 6; // error // const int*로 dereferencing해서 수정할 수 없다. //c_value1_1 = 6; // error // 상수이므로 수정할 수 없다 ptr1 = &amp;value1_2; // ok // const int*는 int의 주소도 담을 수 있다.">
+<link rel="canonical" href="https:originalkyu.github.io/learn/cpp/const/" />
+
+<link rel="stylesheet" href="/css/originalkyu.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+    <nav class="navbar">
+            <a href="/post/">
+                <img src= "/images/jooglorylogo.png" alt="JooGlory Snapshot logo">
+            </a>
+    </nav>
+</header>
+		<main class="wrapper">
+			
+
+<article>
+    <h2 id="pointer와-const">pointer와 const</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// case 1 const int* : const int 주소를 담을 수 있는 포인터 변수
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> c_value1_1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> value1_2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//int* ptr1 = &amp;c_value1_1;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// int* ptr1은 심볼릭 상수를 가리킬 수 없다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> ptr1 <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>c_value1_1;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//*ptr1 = 6;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// const int*로 dereferencing해서 수정할 수 없다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//c_value1_1 = 6;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 상수이므로 수정할 수 없다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	ptr1 <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>value1_2;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// const int*는 int의 주소도 담을 수 있다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 이럴 때는 ptr로 dereferencing해서 값을 수정할 수 없다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// 하지만 value1_2를 직접 수정할 수는 있다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// case 2 int* const : int 주소를 담을 수 있는 포인터 상수. 선언과 초기화가 같이 일어나야한다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> value2_1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> value2_2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> <span style="color:#66d9ef">const</span> ptr <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>value2_1;
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span>ptr <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//ptr = &amp;value2_2;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// int* pointer가 다른 것을 가리키도록 바꿀 수 없다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// case 3 const int* const : 가리키는 변수와 포인터 변수 모두 상수인 경우
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="reference와-const">reference와 const</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> y <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref1 <span style="color:#f92672">=</span> x; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref2 <span style="color:#f92672">=</span> x; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref3 <span style="color:#f92672">=</span> y; <span style="color:#75715e">// error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref4 <span style="color:#f92672">=</span> y; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref5 <span style="color:#f92672">=</span> ref1; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref6 <span style="color:#f92672">=</span> ref2; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref7 <span style="color:#f92672">=</span> ref4; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>ref <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">4</span>; <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>cout <span style="color:#f92672">&lt;&lt;</span> ref;
+</span></span><span style="display:flex;"><span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#f92672">&amp;</span>ref; <span style="color:#75715e">// 주소가 출력됨
+</span></span></span></code></pre></div><ul>
+<li>const reference는 literal로 초기화할 수 있다. 이 때 const reference는 주소도 출력할 수 있다</li>
+<li>이러한 특징으로 인해 아래의 코드처럼 별도의 변수 선언 없이 literal 등을 바로 인자로 줄 수 있는 장점이 있다</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">&amp;</span>x) {...}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>func1(a); <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>func1(<span style="color:#ae81ff">2</span>); <span style="color:#75715e">// ok
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>func1(a<span style="color:#f92672">+</span><span style="color:#ae81ff">4</span>); <span style="color:#75715e">// ok
+</span></span></span></code></pre></div>
+</article>
+
+
+
+		</main>
+		
+		
+	</div>
+</body>
+
+</html>

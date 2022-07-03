@@ -8,12 +8,84 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 29 Jun 2022 17:46:46 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/learn/cpp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Review1</title>
-      <link>https:originalkyu.github.io/learn/cpp/review1/</link>
-      <pubDate>Wed, 29 Jun 2022 17:52:01 +0900</pubDate>
+      <title>Passing Arguments</title>
+      <link>https:originalkyu.github.io/learn/cpp/passing-arguments/</link>
+      <pubDate>Thu, 30 Jun 2022 13:59:56 +0900</pubDate>
       
-      <guid>https:originalkyu.github.io/learn/cpp/review1/</guid>
-      <description></description>
+      <guid>https:originalkyu.github.io/learn/cpp/passing-arguments/</guid>
+      <description>값에 의한 인수 전달 // call by value int x = 6; doSomething(x); doSomething(5); void doSomething(vector&amp;lt;int&amp;gt; arr) {...} // vector가 복사되어 이용되고, 함수 밖에 영향을 주지 않는다 참조에 의한 인수 전달 reference 페이지 참고 주소에 의한 인수 전달 void func1(int *ptr) { ... } ... int value = 5; func1(&amp;amp;value); 위의 코드는 포인터 변수 입장에서 보면 값의 의한 전달로 볼 수도 있다 아래 코드처럼 생각하면 이해하기 쉽다 typedef int* pint; void foo(pint ptr) {.</description>
+    </item>
+    
+    <item>
+      <title>Returning Values</title>
+      <link>https:originalkyu.github.io/learn/cpp/returning-values/</link>
+      <pubDate>Thu, 30 Jun 2022 12:00:29 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/returning-values/</guid>
+      <description>return by value #include &amp;lt;iostream&amp;gt; using namespace std; int getValue(int x) { int value = x * 2; return value; } int main() { int value = getValue(3); return 0; } return by address #include &amp;lt;iostream&amp;gt; using namespace std; int* allocateMemory(int size) { return new int[size]; } int main() { int* array = allocateMemory(1024); return 0; } return by reference using namespace std; int&amp;amp; getValue(int x) { int value = x * 2; return value; } int main() { int value = getValue(3); return 0; } 그런데 아래 코드처럼 받는 쪽에서 reference로 받는다면 문제가 생긴다 #include &amp;lt;iostream&amp;gt; using namespace std; int&amp;amp; getValue(int x) { int value = x * 2; return value; } int main() { int &amp;amp;value = getValue(3); cout &amp;lt;&amp;lt; value &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; value &amp;lt;&amp;lt; endl; return 0; } 함수에서 만들어지는 value는 함수가 return할 때 해제되기 때문이다 아래의 코드는 return by reference의 유용한 방식 #include &amp;lt;iostream&amp;gt; #include &amp;lt;array&amp;gt; using namespace std; int&amp;amp; get(std::array&amp;lt;int, 100&amp;gt;&amp;amp; my_array, int ix) { return my_array[ix]; } int main() { std::array&amp;lt;int, 100&amp;gt; my_array; my_array[30] = 10; get(my_array, 30) = 1024; cout &amp;lt;&amp;lt; my_array[30] &amp;lt;&amp;lt; endl; return 0; } structure #include &amp;lt;iostream&amp;gt; #include &amp;lt;array&amp;gt; using namespace std; struct S { int a, b, c, d; }; S getStruct() { S my_s{ 1, 2, 3, 4 }; } int main() { S my_s = getStruct(); my_s.</description>
+    </item>
+    
+    <item>
+      <title>Std Vector</title>
+      <link>https:originalkyu.github.io/learn/cpp/std-vector/</link>
+      <pubDate>Thu, 30 Jun 2022 11:58:57 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/std-vector/</guid>
+      <description>std::vector #include &amp;lt;iostream&amp;gt; #include &amp;lt;vector&amp;gt; using namespace std; int main() { std::vector&amp;lt;int&amp;gt; array; // std::array&amp;lt;int, 5&amp;gt; array; 와 다르게 사이즈를 반드시 적지 않아도 된다 std::vector&amp;lt;int&amp;gt; array2 = { 1, 2, 3, 4, 5 }; cout &amp;lt;&amp;lt; array2.size() &amp;lt;&amp;lt; endl; std::vector&amp;lt;int&amp;gt; array3 = { 1, 2, 3, }; cout &amp;lt;&amp;lt; array3.size() &amp;lt;&amp;lt; endl; std::vector&amp;lt;int&amp;gt; array4 { 1, 2, 3, }; cout &amp;lt;&amp;lt; array4.size() &amp;lt;&amp;lt; endl; for (auto&amp;amp; itr : array2) cout &amp;lt;&amp;lt; itr &amp;lt;&amp;lt; &amp;#34; &amp;#34;; cout &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; array2[1] &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; array2.</description>
+    </item>
+    
+    <item>
+      <title>Std Array</title>
+      <link>https:originalkyu.github.io/learn/cpp/std-array/</link>
+      <pubDate>Thu, 30 Jun 2022 11:24:22 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/std-array/</guid>
+      <description>std::array #include &amp;lt;iostream&amp;gt; #include &amp;lt;array&amp;gt; using namespace std; int main() { // std::array는 정적 배열을 대체할 수 있다. // std::array 선언과 초기화 std::array&amp;lt;int, 5&amp;gt; my_arr = { 1, 2, 3, 4, 5 }; my_arr = { 0, 1, 2, 3, 4 }; my_arr = { 0, 1, 2, }; // 나머지 두 개는 0으로 채워준다. // 이 때, my_arr 은 {0, 1, 2, 0, 0}으로 초기화되어 있다. for (auto element : my_arr) cout &amp;lt;&amp;lt; element &amp;lt;&amp;lt; &amp;#34; &amp;#34;; cout &amp;lt;&amp;lt; endl; // std::array 접근 방법과 기능 cout &amp;lt;&amp;lt; my_arr[0] &amp;lt;&amp;lt; endl; // ok cout &amp;lt;&amp;lt; my_arr.</description>
+    </item>
+    
+    <item>
+      <title>Array</title>
+      <link>https:originalkyu.github.io/learn/cpp/array/</link>
+      <pubDate>Thu, 30 Jun 2022 11:20:14 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/array/</guid>
+      <description>정적배열 #include &amp;lt;iostream&amp;gt; #define NUM_STUDENTS 10000 using namespace std; void doSomething(int scores[20]) { cout &amp;lt;&amp;lt; scores[0] &amp;lt;&amp;lt; endl; } int main() { // 정적 배열 이용. runtime에 크기가 결정될 수 없다. int students_scores1[NUM_STUDENTS]; // c스타일 방식이다. 권장하지 않는 코딩 방식 // 차라리 다음처럼 상수를 이용한다. const int num_students = 20; int students_scores2[num_students]; doSomething(students_scores2); // 배열을 인자로 넘겨줄 수 있다. } 동적인 배열 #include &amp;lt;iostream&amp;gt; using namespace std; int main() { // int array[1000000]; // error가 난다.</description>
+    </item>
+    
+    <item>
+      <title>Linkage</title>
+      <link>https:originalkyu.github.io/learn/cpp/linkage/</link>
+      <pubDate>Thu, 30 Jun 2022 11:06:10 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/linkage/</guid>
+      <description>정리 Global variable: 전역변수 Static Variable : 정적변수 Internal Linkage : 내부 연결 External Linkage : 외부 연결 linkage가 없다 : 변수의 범위가 블록 안에 갇혀있다. internal linkage : 변수를 파일 안에서 자유롭게 사용할 수 있다. 파일 안에서만 사용할 수 있는 전역변수 external linkage : 다른 cpp 파일에서도 사용할 수 있다. 다른 파일에서도 사용할 수 있는 전역변수 linking: 각각의 cpp파일에서 만들어진 obj파일 사이에서 연결되는 것끼리 연결함 linkage : 연결의 의미 extern : 다른 곳에 함수의 body가 선언되어 있다는 의미.</description>
+    </item>
+    
+    <item>
+      <title>For each</title>
+      <link>https:originalkyu.github.io/learn/cpp/for-each/</link>
+      <pubDate>Thu, 30 Jun 2022 11:01:20 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/for-each/</guid>
+      <description>for each문 #include &amp;lt;iostream&amp;gt; #include &amp;lt;limits&amp;gt; using namespace std; int main() { const int c_fibonacci[] = { 0, 1, 10, 45, 91 }; int fibonacci[] = { 0, 1, 10, 45, 91 }; // for each문 사용법 for (int number : c_fibonacci) cout &amp;lt;&amp;lt; number &amp;lt;&amp;lt; &amp;#34; &amp;#34;; cout &amp;lt;&amp;lt; endl; // fibonacci의 내용을 바꾸기, 하지만 바뀌지 않는다. for (int number : fibonacci) number = 10; // reference를 이용해서 fibonacci의 내용을 바꿀 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Const</title>
+      <link>https:originalkyu.github.io/learn/cpp/const/</link>
+      <pubDate>Thu, 30 Jun 2022 10:59:09 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/const/</guid>
+      <description>pointer와 const #include &amp;lt;iostream&amp;gt; using namespace std; int main() { // case 1 const int* : const int 주소를 담을 수 있는 포인터 변수 const int c_value1_1 = 5; int value1_2 = 6; //int* ptr1 = &amp;amp;c_value1_1; // error // int* ptr1은 심볼릭 상수를 가리킬 수 없다 const int* ptr1 = &amp;amp;c_value1_1; // ok //*ptr1 = 6; // error // const int*로 dereferencing해서 수정할 수 없다. //c_value1_1 = 6; // error // 상수이므로 수정할 수 없다 ptr1 = &amp;amp;value1_2; // ok // const int*는 int의 주소도 담을 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>Reference</title>
+      <link>https:originalkyu.github.io/learn/cpp/reference/</link>
+      <pubDate>Thu, 30 Jun 2022 09:55:04 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/cpp/reference/</guid>
+      <description>reference 기본 설명 #include &amp;lt;iostream&amp;gt; using namespace std; void func(int&amp;amp; value) { cout &amp;lt;&amp;lt; &amp;amp;value &amp;lt;&amp;lt; endl; value = 1000; } int main() { int value = 1; const int c_value = 9; int* ptr = &amp;amp;value; int&amp;amp; ref = value; // reference 변수 선언 방법 // int &amp;amp;c_ref = c_value; // error가 난다. const int&amp;amp; c_ref = c_value; // ok ref = 10; // *ptr = 10; cout &amp;lt;&amp;lt; ref &amp;lt;&amp;lt; endl; // 1 출력 cout &amp;lt;&amp;lt; &amp;amp;value &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;amp;ref &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; ptr &amp;lt;&amp;lt; endl; // 모두 같은 주소를 출력한다.</description>
     </item>
     
   </channel>

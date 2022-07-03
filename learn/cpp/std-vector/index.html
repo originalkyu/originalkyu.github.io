@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+<title>Std Vector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="std::vector #include &lt;iostream&gt; #include &lt;vector&gt; using namespace std; int main() { std::vector&lt;int&gt; array; // std::array&lt;int, 5&gt; array; 와 다르게 사이즈를 반드시 적지 않아도 된다 std::vector&lt;int&gt; array2 = { 1, 2, 3, 4, 5 }; cout &lt;&lt; array2.size() &lt;&lt; endl; std::vector&lt;int&gt; array3 = { 1, 2, 3, }; cout &lt;&lt; array3.size() &lt;&lt; endl; std::vector&lt;int&gt; array4 { 1, 2, 3, }; cout &lt;&lt; array4.size() &lt;&lt; endl; for (auto&amp; itr : array2) cout &lt;&lt; itr &lt;&lt; &#34; &#34;; cout &lt;&lt; endl; cout &lt;&lt; array2[1] &lt;&lt; endl; cout &lt;&lt; array2.">
+<link rel="canonical" href="https:originalkyu.github.io/learn/cpp/std-vector/" />
+
+<link rel="stylesheet" href="/css/originalkyu.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+    <nav class="navbar">
+            <a href="/post/">
+                <img src= "/images/jooglorylogo.png" alt="JooGlory Snapshot logo">
+            </a>
+    </nav>
+</header>
+		<main class="wrapper">
+			
+
+<article>
+    <h2 id="stdvector">std::vector</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> array;
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// std::array&lt;int, 5&gt; array; 와 다르게 사이즈를 반드시 적지 않아도 된다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> array2 <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span> };
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> array2.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> array3 <span style="color:#f92672">=</span> { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, };
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> array3.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> array4 { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, };
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> array4.size() <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> itr : array2)
+</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> itr <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> array2[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	cout <span style="color:#f92672">&lt;&lt;</span> array2.at(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>	array2.resize(<span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// int *my_arr = new int[5]; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// delete[] my_arr;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// 동적 배열은 delete를 해줘야하지만
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// vector는 delete를 할 필요가 없다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div>
+</article>
+
+
+
+		</main>
+		
+		
+	</div>
+</body>
+
+</html>

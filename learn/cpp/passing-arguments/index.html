@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+<title>Passing Arguments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="값에 의한 인수 전달 // call by value int x = 6; doSomething(x); doSomething(5); void doSomething(vector&lt;int&gt; arr) {...} // vector가 복사되어 이용되고, 함수 밖에 영향을 주지 않는다 참조에 의한 인수 전달 reference 페이지 참고 주소에 의한 인수 전달 void func1(int *ptr) { ... } ... int value = 5; func1(&amp;value); 위의 코드는 포인터 변수 입장에서 보면 값의 의한 전달로 볼 수도 있다 아래 코드처럼 생각하면 이해하기 쉽다 typedef int* pint; void foo(pint ptr) {.">
+<link rel="canonical" href="https:originalkyu.github.io/learn/cpp/passing-arguments/" />
+
+<link rel="stylesheet" href="/css/originalkyu.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+    <nav class="navbar">
+            <a href="/post/">
+                <img src= "/images/jooglorylogo.png" alt="JooGlory Snapshot logo">
+            </a>
+    </nav>
+</header>
+		<main class="wrapper">
+			
+
+<article>
+    <h2 id="값에-의한-인수-전달">값에 의한 인수 전달</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// call by value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span>doSomething(x);
+</span></span><span style="display:flex;"><span>doSomething(<span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSomething</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> arr) {...}
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// vector가 복사되어 이용되고, 함수 밖에 영향을 주지 않는다
+</span></span></span></code></pre></div><h2 id="참조에-의한-인수-전달">참조에 의한 인수 전달</h2>
+<ul>
+<li>reference 페이지 참고</li>
+</ul>
+<h2 id="주소에-의한-인수-전달">주소에 의한 인수 전달</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>ptr) { ... }
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>func1(<span style="color:#f92672">&amp;</span>value);
+</span></span></code></pre></div><ul>
+<li>위의 코드는 포인터 변수 입장에서 보면 값의 의한 전달로 볼 수도 있다</li>
+<li>아래 코드처럼 생각하면 이해하기 쉽다</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> pint;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">foo</span>(pint ptr) {...}
+</span></span></code></pre></div><ul>
+<li>아래 코드는 const int *ptr로 전달한다. 함수 안 에서 값을 변경할 수 없다</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func1</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>ptr)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span>ptr <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; <span style="color:#75715e">// error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func2</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>arr)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// error;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><ul>
+<li>아래 코드는 int const *ptr로 전달한다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func3</span>(<span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">const</span> ptr) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>	ptr <span style="color:#f92672">=&amp;</span>x; <span style="color:#75715e">// error;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func4</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">const</span> ptr)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+</article>
+
+
+
+		</main>
+		
+		
+	</div>
+</body>
+
+</html>
