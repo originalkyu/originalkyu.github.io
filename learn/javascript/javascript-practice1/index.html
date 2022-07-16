@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+<title>Javascript Practice1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="참고 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference
+예제로 연습하기 문자열 거꾸로 출력하기 var reverse = function(str) { var reverseStr = &#34;&#34;; for(var i = str.length-1; i &gt;= 0, i--) // length 필드는 문자열의 문자 개수 // null제외 { reverseStr = reverseStr &#43; str.charAt(i); } return reverseStr; } console.log(reverse(&#34;Nice to Meet you&#34;)); \ 출력하기 console.log(&#34;(\\_/)&#34;); console.log(&#34;(. . )&#34;); console.log(&#34;|\\ /|&#34;); \ 를 출력하려면 \로 해야한다
+readline 모듈 사용법 // 1. realine 모듈 불러오기 const readline = require(&#34;readline&#34;); // 2.">
+<link rel="canonical" href="https:originalkyu.github.io/learn/javascript/javascript-practice1/" />
+
+<link rel="stylesheet" href="/css/originalkyu.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+    <nav class="navbar">
+            <a href="/post/">
+                <img src= "/images/jooglorylogo.png" alt="JooGlory Snapshot logo">
+            </a>
+    </nav>
+</header>
+		<main class="wrapper">
+			
+
+<article>
+    <p>참고
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference</a></p>
+<h2 id="예제로-연습하기">예제로 연습하기</h2>
+<hr>
+<h2 id="문자열-거꾸로-출력하기">문자열 거꾸로 출력하기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">reverse</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">str</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">reverseStr</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">i</span><span style="color:#f92672">--</span>) 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// length 필드는 문자열의 문자 개수
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// null제외
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">reverseStr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reverseStr</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#a6e22e">i</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">reverseStr</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">reverse</span>(<span style="color:#e6db74">&#34;Nice to Meet you&#34;</span>));
+</span></span></code></pre></div><h2 id="-출력하기">\ 출력하기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;(\\_/)&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;(. . )&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;|\\ /|&#34;</span>);
+</span></span></code></pre></div><p>\ 를 출력하려면 \로 해야한다</p>
+<h2 id="readline-모듈-사용법">readline 모듈 사용법</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. realine 모듈 불러오기
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;readline&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. 인터페이스 생성하기
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readline</span>.<span style="color:#a6e22e">createInterface</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>,
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. 입출력을 처리하는 코드
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 3.1입력 부분
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;line&#34;</span>, (<span style="color:#a6e22e">line</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 입력받은 후 실행할 코드
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">line</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">line</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3.2출력 부분
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;close&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 입력이 끝난 후 실행할 코드
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;readline&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readline</span>.<span style="color:#a6e22e">createInterface</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;line&#34;</span>, (<span style="color:#a6e22e">line</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">line</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//console.log(line);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;close&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">input</span>[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><ul>
+<li>rl.on()
+<ul>
+<li>인터페이스가 가지는 on 메서드를 사용해서 이벤트와 콜백함수를 전달</li>
+<li>위에서는 line 이벤트와 close 이벤트를 전달하고 있음</li>
+</ul>
+</li>
+<li>rl.close(): 인터페이스를 종료해서 무한히 입력받는 것을 방지
+<ul>
+<li>close 이벤트를 발생시켜서 입력값을 활용하여 출력값을 도출하는 코드 작성</li>
+<li>close는 더이상 입력되는 값이 없을 때 실행되는 이벤트</li>
+</ul>
+</li>
+<li>process.exit(): 프로세스를 종료시킨다</li>
+</ul>
+<h2 id="정수의-배열-오름차순-정렬하기">정수의 배열 오름차순 정렬하기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">soldier</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">6</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 정렬된 배열과 길이를 구하세요.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">compareNumbers</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">a</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">b</span> )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">b</span> )
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">soldier</span>.<span style="color:#a6e22e">sort</span>(<span style="color:#a6e22e">compareNumbers</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// array.sort(함수) 를 하면 복사본이 만들어지는 것이 아니라 원래의 배열이 정렬
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">soldier</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">count</span>);
+</span></span></code></pre></div><p>sort()를 이용하면 복사본이 만들어지는 것이 아니라 원래의 배열이 정렬된다.
+compareNumbers 함수의 return이 0보다 작다면 a를 b보다 더 낮은 색인으로 정렬한다<br>
+return이 0이라면 변경하지 않는다</p>
+<p>문자열을 비교하기 위해서 아래의 함수를 이용할 수 있다</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">compareNumbers</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="splice-join-match">splice, join, match</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">words</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;have&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;pen&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;have&#39;</span>, <span style="color:#e6db74">&#39;pineapple&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;have&#39;</span>, <span style="color:#e6db74">&#39;an&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;pen&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">lyrics</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">lyrics</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/p/g</span>).<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">lyrics</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">words</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39; &#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">lyrics</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">count</span>(<span style="color:#a6e22e">lyrics</span>));
+</span></span></code></pre></div><ul>
+<li>splice
+<ul>
+<li>배열.splice(m, n) : m+1번째 원소부터 n개 제거</li>
+</ul>
+</li>
+<li>join
+<ul>
+<li>배열.join(&rsquo; &lsquo;) : &rsquo; &lsquo;로 원소들을 연결하여 문자열로 return</li>
+</ul>
+</li>
+<li>match
+<ul>
+<li>문자열.match(regexp)
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="정규표현식">정규표현식</h2>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp</a>
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match</a>
+<a href="https://curryyou.tistory.com/234">https://curryyou.tistory.com/234</a></p>
+<ul>
+<li>
+<p>정규표현식 소개<br>
+/패턴/플래그
+=&gt; 패턴 : {매칭패턴,검색패턴}{수량 패턴}
+010-111-2222 는 &ldquo;숫자3개&rdquo;, &ldquo;-&rdquo;, &ldquo;숫자4개&rdquo;, &ldquo;-&rdquo;, &ldquo;숫자4개&rdquo; 로 이루어져있다.<br>
+이것은 const regex = /\d{3}-\d{4}-\d{4}/; 로 표현할 수 있다.<br>
+\d 는 숫자, {}는 개수를 의미한다
+다음처럼 특정 문자열이 해당 패턴에 맞는지 체크하거나 문자열에서 추출할 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">regex</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/\d{3}-\d{4}-\d{4}/</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">regex</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#34;010-1111-2222&#34;</span>); <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">regex</span>.<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#34;010-11-22&#34;</span>); <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;제 번호는 010-1111-2222 입니다.&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">text</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">regex</span>); <span style="color:#75715e">// 010-1111-2222
+</span></span></span></code></pre></div></li>
+<li>
+<p>정규표현식 예시<br>
+/대/ : &lsquo;대&rsquo;를 &lsquo;하나&rsquo;만 찾는다<br>
+/대/g : &lsquo;대&rsquo;를 &lsquo;모두&rsquo; 찾는다<br>
+/대나무 빨대/ : &lsquo;대나무 빨대&rsquo;를 &lsquo;하나 찾는다<br>
+/[대a0]/g : &lsquo;대&rsquo;, &lsquo;a&rsquo;, &lsquo;0&rsquo;을 모두 찾는다</p>
+<ul>
+<li>[]는 or의 기능</li>
+</ul>
+<p>/[0-9]/g : 숫자 0~9를 모두 찾는다<br>
+/[a-zA-Z]/g : 알파벳 대문자/소문자를 모두 찾는다<br>
+/[^0-9]/g : 숫자 0~9가 아닌 것을 모두 찾는다</p>
+</li>
+<li>
+<p>정규표현식의 형식, 패턴, 플래그, 메서드</p>
+<ol>
+<li>
+<p>/패턴/플래그<br>
+플래그는 하나만 찾을지 모두 찾을지 설정</p>
+</li>
+<li>
+<p>정규표현식 매칭 패턴(문자, 숫자, 기호 등)<br>
+a-zA-Z : 영어알파벳<br>
+ㄱ-ㅎ가-힣 : 한글 문자<br>
+0-9 : 숫자<br>
+. : 모든 문자열. 단 줄바꿈은 x<br>
+\d : 숫자<br>
+\D : 숫자가 아닌 것<br>
+\w : 영어, 알파벳, 숫자, 언더스코어<br>
+\W : \w가 아닌 것<br>
+\s : space 공백<br>
+\S : space공백이 아닌 것<br>
+\특수기호 : 특수기호</p>
+</li>
+<li>
+<p>정규표현식 검색 패턴<br>
+| : OR<br>
+[] : 괄호안의 문자들 중 하나
+[^문자] : 괄호 안의 문자를 제외한 것<br>
+^문자열 : 특정 문자열로 시작<br>
+문자열$ : 특정 문자열로 끝남<br>
+() : 그룹 검색 및 분류<br>
+(?:패턴) : 그룹 검색(분류x)<br>
+\b : 단어의 처음/끝<br>
+\B : 단어의 처음/끝이 아님</p>
+</li>
+<li>
+<p>정규표현식 개수(수량) 패턴<br>
+? : 최대 한번<br>
+* : 없거나 있거나<br>
++ : 최소 한 개<br>
+{n} : n개<br>
+{Min,} : 최소 Min개<br>
+{Min, Max} : 최소 Min, 최대 Max</p>
+</li>
+<li>
+<p>정규표현식 플래그<br>
+동시에 여러개 사용할 수 있다<br>
+g : 모든 문자 검색(안 쓰면 매칭되는 첫 문자만 검색)<br>
+i : 대소문자 구분 안 함<br>
+m : 여러 행의 문자열에 대해 검색</p>
+</li>
+<li>
+<p>정규표현식 주요 메서드<br>
+문자열.match(정규표현식/플래그) : 문자열에서 정규표현식에 매칭되는 항목을 배열로 반환<br>
+문자열.replace(정규표현식, &ldquo;대체문자열&rdquo;) : 정규표현식에 매칭되는 항목을 대체문자열로 변환<br>
+문자열.split(정규표현식) : 문자열을 정규표현식에 매칭되는 항목으로 쪼개어 배열로 반환<br>
+정규표현식.test(&ldquo;문자열&rdquo;) : 문자열이 정규표현식돠 매칭되면 true, 아니면 false 반환<br>
+정규표현식.exec(&ldquo;문자열&rdquo;) : match와 유사하지만 첫번째 매칭만 반환</p>
+</li>
+</ol>
+</li>
+<li>
+<p>정규표현식 샘플 코드</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. 웹사이트 주소 정규표현식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">/https?:/</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">\</span>[<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">w</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">-</span><span style="color:#960050;background-color:#1e0010">\</span>.]<span style="color:#f92672">+</span><span style="color:#960050;background-color:#1e0010">/g</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>) <span style="color:#a6e22e">http</span> =&gt; <span style="color:#a6e22e">http</span> <span style="color:#a6e22e">로</span> <span style="color:#a6e22e">시작</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>) <span style="color:#a6e22e">s</span><span style="color:#f92672">?</span> =&gt; <span style="color:#a6e22e">다음으로</span> <span style="color:#a6e22e">s가</span> <span style="color:#a6e22e">있거나</span> <span style="color:#a6e22e">없음</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>) <span style="color:#f92672">:</span> =&gt; <span style="color:#a6e22e">다음으로</span> <span style="color:#f92672">:</span><span style="color:#a6e22e">가</span> <span style="color:#a6e22e">옴</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>) <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">/</span> =&gt; <span style="color:#a6e22e">다음으로</span> <span style="color:#75715e">// 가 있음
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#ae81ff">5</span>) [<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">w</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">-</span><span style="color:#960050;background-color:#1e0010">\</span>.]<span style="color:#f92672">+</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">w</span>(<span style="color:#a6e22e">영문자</span>, <span style="color:#a6e22e">언더스코어</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">-</span>
+</span></span><span style="display:flex;"><span>        .
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">으로</span> <span style="color:#a6e22e">이루어진</span> <span style="color:#a6e22e">문자열이</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">+</span> =&gt; <span style="color:#a6e22e">한개</span> <span style="color:#a6e22e">이상</span> <span style="color:#a6e22e">있다</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">6</span>) <span style="color:#a6e22e">g</span> =&gt; <span style="color:#a6e22e">매칭되는</span> <span style="color:#a6e22e">모든</span> <span style="color:#a6e22e">것을</span> <span style="color:#a6e22e">다</span> <span style="color:#a6e22e">찾는다</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. 전화번호 정규표현식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">/\d{2,3}-\d{3,4}-\d{4}/g</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>) <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">d</span>{<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>} =&gt; <span style="color:#a6e22e">숫자</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">~</span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">개</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">2</span>) <span style="color:#f92672">-</span> =&gt; <span style="color:#a6e22e">다음에</span> <span style="color:#a6e22e">하이픈이</span> <span style="color:#a6e22e">옴</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">3</span>) <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">d</span>{<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>} =&gt; <span style="color:#a6e22e">다음에</span> <span style="color:#a6e22e">숫자</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">~</span><span style="color:#ae81ff">4</span><span style="color:#a6e22e">개가</span> <span style="color:#a6e22e">옴</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">4</span>) <span style="color:#f92672">-</span> =&gt; <span style="color:#a6e22e">다음에</span> <span style="color:#a6e22e">하이픈이</span> <span style="color:#a6e22e">옴</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. 이메일주소 정규표현식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#e6db74">/[\w\-\.]+\@[\w\-\.]+/g</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 4. 특수기호 정규표현식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 1) 모든 특수기호를 나열
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#e6db74">/\[\]\{\}\/\(\)\.\?\&lt;\&gt;!@#$%^&amp;*/g</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 2) 문자와 숫자가 아닌 것을 매칭
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#e6db74">/[^a-zA-Z0-9가-힣ㄱ-ㅎ]/g</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">regExp</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/\s/g</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">숫자만 체크 정규식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">var regExp = /^[0-9]+$/;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">이메일 체크 정규식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">핸드폰번호 정규식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">var regExp = /^\d{3}-\d{3,4}-\d{4}$/;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">일반 전화번호 정규식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">var regExp = /^\d{2,3}-\d{3,4}-\d{4}$/;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">아이디나 비밀번호 정규식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">var regExp = /^[a-z0-9_]{4,20}$/; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">휴대폰번호 체크 정규식
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">var regExp = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="숫자문자열-웹화면에-출력하기">숫자+문자열 웹화면에 출력하기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bus&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;like&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">num</span><span style="color:#f92672">+</span><span style="color:#a6e22e">str1</span><span style="color:#f92672">+</span><span style="color:#a6e22e">str2</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>document.<span style="color:#a6e22e">write</span>(<span style="color:#ae81ff">400</span>);
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;&lt;br&gt;&#34;</span>);
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;bus&lt;br&gt;&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;li&lt;br&gt;ke&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// &lt;br&gt;을 이용하면 행이 바뀐다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;Its all right.&lt;br&gt;&#34;</span>);
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;&#34;Its all right.&#34;&lt;br&gt;&#39;</span>);
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;It\&#39;s all right.&#34;</span>);
+</span></span></code></pre></div><h2 id="split와-typeof">split와 typeof</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good morning! Have a nice day.&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// step1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39; &#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// step2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">writeln</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">arr</span>);
+</span></span><span style="display:flex;"><span>document.<span style="color:#a6e22e">writeln</span>(<span style="color:#a6e22e">arr</span>[<span style="color:#ae81ff">0</span>]);
+</span></span></code></pre></div><ul>
+<li>문자열.split(&rsquo; &lsquo;)
+<ul>
+<li>공백을 기준으로 잘라서 배열을 만든다</li>
+</ul>
+</li>
+<li>typeof 대상</li>
+</ul>
+<h2 id="입력받아서-조건에-맞게-출력하기">입력받아서 조건에 맞게 출력하기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;readline&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readline</span>.<span style="color:#a6e22e">createInterface</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>,
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;line&#34;</span>, (<span style="color:#a6e22e">line</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">line</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">50</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;우산을 챙긴다.&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;그냥 간다.&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;close&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="피보나치-수열">피보나치 수열</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fibo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n</span>) 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fiboarr</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#a6e22e">before</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">post</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">now</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">n</span>;)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fiboarr</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">now</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">before</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">now</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">post</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">post</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">before</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">now</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fiboarr</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;readline&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readline</span>.<span style="color:#a6e22e">createInterface</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>,
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;line&#34;</span>, (<span style="color:#a6e22e">line</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fibo</span>(<span style="color:#a6e22e">line</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;close&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><h2 id="match-includes">match(), includes()</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// &#34;촉촉한 초코칩&#34;이 몇 번 나오는지 확인해봅시다.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;readline&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readline</span>.<span style="color:#a6e22e">createInterface</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>,
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">regExp</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/촉촉한 초코칩/g</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;line&#34;</span>, (<span style="color:#a6e22e">line</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">line</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;촉촉한 초코칩&#34;</span>))
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// string.includes(문자열)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">line</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">regExp</span>).<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// string.match(정규표현식)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">0</span>);<span style="color:#a6e22e">sliceㅁ</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;close&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="두-줄에-걸쳐서-숫자-2개를-입력받기-slice">두 줄에 걸쳐서 숫자 2개를 입력받기, slice</h2>
+<h2 id="match-join-연습">match, join 연습</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 지시사항을 참고하여 코드를 작성하세요.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;readline&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">readline</span>.<span style="color:#a6e22e">createInterface</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">input</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdin</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">stdout</span>,
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">regExp</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/[0-9]/g</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;line&#34;</span>, (<span style="color:#a6e22e">line</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">line</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">regExp</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">rl</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;close&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><p>string.charCodeAt(index)를 이용하면 문자열 안의 index에 해당하는 문자의 유니 코드 값을 얻을 수 있다</p>
+
+</article>
+
+
+
+		</main>
+		
+		
+	</div>
+</body>
+
+</html>

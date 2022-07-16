@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+<title>Review4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Element를 서서히 사라지게 하기 // step1 id가 game인 element 가져오기 // step2 display 속성을 변경하여 요소가 사라지는 함수 만들기 function hide_game() { document.getElementById(&#34;game&#34;).style.display = &#34;none&#34;; } // step3 id가 btn인 element를 클릭하면 만든 함수가 실행되는 이벤트를 등록 document.getElementById(&#34;btn&#34;).addEventListener(&#34;click&#34;, hide_game); FORM을 통한 입출력 문제 // step1 &lt;form&gt; 태그의 값을 가져오는 함수 만들기 function getValue(e) { // step1-1 필요한 element 가져오기 var form = document.getElementById(&#34;form&#34;); var input = document.getElementById(&#34;input&#34;); var answer = document.">
+<link rel="canonical" href="https:originalkyu.github.io/learn/javascript/review4/" />
+
+<link rel="stylesheet" href="/css/originalkyu.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+    <nav class="navbar">
+            <a href="/post/">
+                <img src= "/images/jooglorylogo.png" alt="JooGlory Snapshot logo">
+            </a>
+    </nav>
+</header>
+		<main class="wrapper">
+			
+
+<article>
+    <h2 id="element를-서서히-사라지게-하기">Element를 서서히 사라지게 하기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span><span style="color:#75715e">// step1 id가 game인 element 가져오기
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// step2 display 속성을 변경하여 요소가 사라지는 함수 만들기
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">hide_game</span>() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;game&#34;</span>).<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// step3 id가 btn인 element를 클릭하면 만든 함수가 실행되는 이벤트를 등록
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;btn&#34;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">hide_game</span>);
+</span></span></code></pre></div><h2 id="form을-통한-입출력-문제">FORM을 통한 입출력 문제</h2>
+<ul>
+<li>
+<!-- raw HTML omitted -->
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// step1 &lt;form&gt; 태그의 값을 가져오는 함수 만들기
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getValue</span>(<span style="color:#a6e22e">e</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// step1-1 필요한 element 가져오기
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">form</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;form&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;input&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;answer&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// step1-2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 결과가 잠깐만 보이고 창이 새로 열리는 것을 방지함
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">val</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">val</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">val</span> <span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">50</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">anser</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;우산을 챙긴다.&#34;</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;그냥 간다.&#34;</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// step1-3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">reset</span>(); 
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 제출 시마다 텍스트 박스를 비워준다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// step2 이벤트 핸들러 등록하기
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">form</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;form&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;submit&#34;</span>, <span style="color:#a6e22e">getValue</span>(<span style="color:#a6e22e">e</span>));
+</span></span></code></pre></div><p>=&gt; 내가 생각한 답 : 오답</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">form</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;form&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;input&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">answer</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;answer&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;submit&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">val</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">val</span>) {
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">val</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">50</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;우산을 챙긴다.&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">answer</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;그냥 간다.&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">reset</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div><h2 id="dom-요소-선택하기">DOM 요소 선택하기</h2>
+<h2 id="dom-요소-렌더링">DOM 요소 렌더링</h2>
+<h2 id="dom-사용자-등록하기">DOM 사용자 등록하기</h2>
+<h2 id="자동차-경주">자동차 경주</h2>
+<h2 id="쇼핑-리스트-만들기">쇼핑 리스트 만들기</h2>
+<h2 id="dom-tree로-브라우저-형태-변형---insertbefore">DOM Tree로 브라우저 형태 변형 - insertBefore()</h2>
+<h2 id="스타벅스-메뉴-세기">스타벅스 메뉴 세기</h2>
+
+</article>
+
+
+
+		</main>
+		
+		
+	</div>
+</body>
+
+</html>

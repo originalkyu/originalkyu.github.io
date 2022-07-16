@@ -8,20 +8,40 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Jul 2022 09:30:12 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/learn/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Review2</title>
-      <link>https:originalkyu.github.io/learn/javascript/review2/</link>
-      <pubDate>Sun, 03 Jul 2022 10:18:46 +0900</pubDate>
+      <title>Javascript Practice2</title>
+      <link>https:originalkyu.github.io/learn/javascript/javascript-practice2/</link>
+      <pubDate>Sat, 09 Jul 2022 11:15:02 +0900</pubDate>
       
-      <guid>https:originalkyu.github.io/learn/javascript/review2/</guid>
-      <description>연산자 산술 연산자 숫자 뿐 아니라 문자열도 산술 연산자가 가능하다 하지만 문자열을 + 할 때는 주의핳ㄴ다 document.write(20 + 10); document.write(20 - 10); document.write(20 * 10); document.write(20 / 10); document.write(20 % 10); document.write(&amp;#34;20&amp;#34; + &amp;#34;10&amp;#34;); // 2010 출력되는 것 주의 document.write(&amp;#34;20&amp;#34; - &amp;#34;10&amp;#34;); document.write(&amp;#34;20&amp;#34; * &amp;#34;10&amp;#34;); document.write(&amp;#34;20&amp;#34; / &amp;#34;10&amp;#34;); document.write(&amp;#34;20&amp;#34; % &amp;#34;10&amp;#34;); 증감 연산자 ++num; --num; num++; num--; 비교 연산자 Boolean 데이터 타입인 true 혹은 false를 반환한다 document.writeln(10 == 10); document.writeln(10 === 10); document.</description>
+      <guid>https:originalkyu.github.io/learn/javascript/javascript-practice2/</guid>
+      <description>Element를 서서히 사라지게 하기 // step1 id가 game인 element 가져오기 // step2 display 속성을 변경하여 요소가 사라지는 함수 만들기 function hide_game() { document.getElementById(&amp;#34;game&amp;#34;).style.display = &amp;#34;none&amp;#34;; } // step3 id가 btn인 element를 클릭하면 만든 함수가 실행되는 이벤트를 등록 document.getElementById(&amp;#34;btn&amp;#34;).addEventListener(&amp;#34;click&amp;#34;, hide_game); FORM을 통한 입출력 문제 // step1 &amp;lt;form&amp;gt; 태그의 값을 가져오는 함수 만들기 function getValue(e) { // step1-1 필요한 element 가져오기 var form = document.getElementById(&amp;#34;form&amp;#34;); var input = document.getElementById(&amp;#34;input&amp;#34;); var answer = document.</description>
     </item>
     
     <item>
-      <title>Review1</title>
-      <link>https:originalkyu.github.io/learn/javascript/review1/</link>
+      <title>JavaScript Lecture2</title>
+      <link>https:originalkyu.github.io/learn/javascript/javascript-lecture2/</link>
+      <pubDate>Sat, 09 Jul 2022 07:30:48 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/javascript/javascript-lecture2/</guid>
+      <description>DOM HTML 문서의 프로그래밍 인터페이스 문서의 구조화된 표현을 제공 프로그래밍 언어가 문서 구조, 스타일, 내용 등을 변경할 수 있도록 함 Core DOM, HTML DOM, XML DOM HTML DOM은 HTML 문서를 조작하고 접근하는 표준화된 방법 Document 객체 Document 객체는 웹 페이지를 의미 웹 페이지에 존재하는 HTML 요소에 접근할 때는 Document 객체부터 접근 Document 메소드 HTML 요소와 관련된 작업을 도와주는 다양한 메소드 제공 HTML 요소의 선택과 생성 HTML 이벤트 핸들러 추가 HTML 객체의 선택 Node 객체 노트와 노트 트리 노드는 HTML DOM에서 정보를 저장하는 계층적 단위이다 노드 트리는 노드들의 집합으로, 노드 간의 관계를 나타낸다 자바스크립트와 HTML DOM으로 노드 트리에 포함된 모든 노드에 접근할 수 있다 노드 트리의 모든 노드는 서로 계층적 관계를 맺는다 부모노드, 형제노드 노드의 종류 문서 노드 : HTML 문서 전체를 나타낸다 요소 노드 : 모든 HTML 요소는 요소 노드로, 속성 노드를 가질 수 있는 유일한 노드이다 속성 노드 : HTML 요소의 모든 속성은 속성 노드.</description>
+    </item>
+    
+    <item>
+      <title>Javascript Practice1</title>
+      <link>https:originalkyu.github.io/learn/javascript/javascript-practice1/</link>
+      <pubDate>Sun, 03 Jul 2022 11:05:30 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/javascript/javascript-practice1/</guid>
+      <description>참고 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference
+예제로 연습하기 문자열 거꾸로 출력하기 var reverse = function(str) { var reverseStr = &amp;#34;&amp;#34;; for(var i = str.length-1; i &amp;gt;= 0, i--) // length 필드는 문자열의 문자 개수 // null제외 { reverseStr = reverseStr + str.charAt(i); } return reverseStr; } console.log(reverse(&amp;#34;Nice to Meet you&amp;#34;)); \ 출력하기 console.log(&amp;#34;(\\_/)&amp;#34;); console.log(&amp;#34;(. . )&amp;#34;); console.log(&amp;#34;|\\ /|&amp;#34;); \ 를 출력하려면 \로 해야한다
+readline 모듈 사용법 // 1. realine 모듈 불러오기 const readline = require(&amp;#34;readline&amp;#34;); // 2.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript Lecture1</title>
+      <link>https:originalkyu.github.io/learn/javascript/javascript-lecture1/</link>
       <pubDate>Sun, 03 Jul 2022 09:30:39 +0900</pubDate>
       
-      <guid>https:originalkyu.github.io/learn/javascript/review1/</guid>
+      <guid>https:originalkyu.github.io/learn/javascript/javascript-lecture1/</guid>
       <description>자바스크립트 동적인 웹사이트 제작 시 화면의 변화를 표현하기 위해 사용되는 프로그래밍 언어 이미지 슬라이드 효과, 파업효과 등 하이브리드 앱, 서버 개발 등에 사용된다 다음처럼 script 태그 안에 src 속성값으로 js 파일을 입력하고 html파일과 연동한다 &amp;lt;body&amp;gt; &amp;lt;script src=&amp;#34;index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; 기초 문법 // 1. 변수 선언과 초기화 var fruit; fruit = &amp;#34;apple&amp;#34;; //var 1fruit; // 변수 이름은 숫자로 시작할 수 없다 // 2. 출력하는 함수 console.log(fruit); document.write(fruit); document.writeln(fruit); // 3. 8가지 데이터 타입 /* 1.</description>
     </item>
     

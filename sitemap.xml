@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https:originalkyu.github.io/learn/javascript/javascript-practice2/</loc>
+    <lastmod>2022-07-09T11:15:02+09:00</lastmod>
+  </url><url>
     <loc>https:originalkyu.github.io/</loc>
-    <lastmod>2022-07-03T10:18:46+09:00</lastmod>
+    <lastmod>2022-07-09T11:15:02+09:00</lastmod>
   </url><url>
-    <loc>https:originalkyu.github.io/learn/javascript/review2/</loc>
-    <lastmod>2022-07-03T10:18:46+09:00</lastmod>
+    <loc>https:originalkyu.github.io/learn/javascript/javascript-lecture2/</loc>
+    <lastmod>2022-07-09T07:30:48+09:00</lastmod>
   </url><url>
-    <loc>https:originalkyu.github.io/learn/javascript/review1/</loc>
+    <loc>https:originalkyu.github.io/learn/javascript/javascript-practice1/</loc>
+    <lastmod>2022-07-03T11:05:30+09:00</lastmod>
+  </url><url>
+    <loc>https:originalkyu.github.io/learn/javascript/javascript-lecture1/</loc>
     <lastmod>2022-07-03T09:30:39+09:00</lastmod>
   </url><url>
     <loc>https:originalkyu.github.io/learn/javascript/</loc>
@@ -41,16 +47,13 @@
     <loc>https:originalkyu.github.io/learn/cpp/reference/</loc>
     <lastmod>2022-06-30T09:55:04+09:00</lastmod>
   </url><url>
-    <loc>https:originalkyu.github.io/learn/study/</loc>
-    <lastmod>2022-06-29T22:45:10+09:00</lastmod>
-  </url><url>
     <loc>https:originalkyu.github.io/myworks/mywork1/</loc>
     <lastmod>2022-06-29T18:27:50+09:00</lastmod>
   </url><url>
     <loc>https:originalkyu.github.io/myworks/</loc>
     <lastmod>2022-06-29T18:27:42+09:00</lastmod>
   </url><url>
-    <loc>https:originalkyu.github.io/learn/htmlcss/</loc>
+    <loc>https:originalkyu.github.io/learn/htmlcssjs/</loc>
     <lastmod>2022-06-29T17:52:55+09:00</lastmod>
   </url><url>
     <loc>https:originalkyu.github.io/learn/cpp/</loc>
@@ -58,9 +61,6 @@
   </url><url>
     <loc>https:originalkyu.github.io/learn/</loc>
     <lastmod>2022-06-29T15:15:20+09:00</lastmod>
-  </url><url>
-    <loc>https:originalkyu.github.io/learn/htmlcss/htmlcss-review1/</loc>
-    <lastmod>2022-06-29T15:11:29+09:00</lastmod>
   </url><url>
     <loc>https:originalkyu.github.io/post/</loc>
     <lastmod>2022-06-29T13:38:01+09:00</lastmod>
