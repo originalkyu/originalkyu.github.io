@@ -299,17 +299,17 @@ section#photo {
 }
 
 #photo .slide:nth-child(1) {
-    background: url("img/click1.jpg") no-repeat center;
+    background: url('{{ "aaa.jpg" | relURL  }}') no-repeat center;
     background-size: cover;
 }
 
 #photo .slide:nth-child(2) {
-    background: url("img/click2.jpg") no-repeat center;
+    background: url('{{ "images/htmlcssjs-sp2/click2.jpg" | relURL }}') no-repeat center;
     background-size: cover;
 }
 
 #photo .slide:nth-child(3) {
-    background: url("img/click3.jpg") no-repeat center;
+    background: url('{{ "images/htmlcssjs-sp2/click3.jpg" | relURL }}') no-repeat center;
     background-size: cover;
 }
 
@@ -322,7 +322,7 @@ section#photo {
 
     width: 22px;
     height: 22px;
-    background: url("img/arrow-left.png");
+    background: url('{{ "aaa.jpg" | relURL  }}');
 
     left: 20px;
 
@@ -334,7 +334,7 @@ section#photo {
 
     width: 22px;
     height: 22px;
-    background: url("img/arrow-right.png");
+    background: url('{{ "images/htmlcssjs-sp2/arrow-right.png" | relURL }}');
 
     right: 20px;
 
