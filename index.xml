@@ -6,7 +6,25 @@
     <description>Recent content on JooGlory Snapshot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jul 2022 11:15:02 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jul 2022 14:38:12 +0900</lastBuildDate><atom:link href="https:originalkyu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Project2 Example</title>
+      <link>https:originalkyu.github.io/learn/htmlcssjs/simple-project2-example/</link>
+      <pubDate>Sat, 16 Jul 2022 14:38:12 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/htmlcssjs/simple-project2-example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simple Project1 Example</title>
+      <link>https:originalkyu.github.io/learn/htmlcssjs/simple-project1-example/</link>
+      <pubDate>Sat, 16 Jul 2022 14:38:07 +0900</pubDate>
+      
+      <guid>https:originalkyu.github.io/learn/htmlcssjs/simple-project1-example/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Javascript Practice2</title>
       <link>https:originalkyu.github.io/learn/javascript/javascript-practice2/</link>
@@ -124,15 +142,6 @@ readline 모듈 사용법 // 1. realine 모듈 불러오기 const readline = req
       
       <guid>https:originalkyu.github.io/learn/cpp/reference/</guid>
       <description>reference 기본 설명 #include &amp;lt;iostream&amp;gt; using namespace std; void func(int&amp;amp; value) { cout &amp;lt;&amp;lt; &amp;amp;value &amp;lt;&amp;lt; endl; value = 1000; } int main() { int value = 1; const int c_value = 9; int* ptr = &amp;amp;value; int&amp;amp; ref = value; // reference 변수 선언 방법 // int &amp;amp;c_ref = c_value; // error가 난다. const int&amp;amp; c_ref = c_value; // ok ref = 10; // *ptr = 10; cout &amp;lt;&amp;lt; ref &amp;lt;&amp;lt; endl; // 1 출력 cout &amp;lt;&amp;lt; &amp;amp;value &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; &amp;amp;ref &amp;lt;&amp;lt; endl; cout &amp;lt;&amp;lt; ptr &amp;lt;&amp;lt; endl; // 모두 같은 주소를 출력한다.</description>
-    </item>
-    
-    <item>
-      <title>Mywork1</title>
-      <link>https:originalkyu.github.io/myworks/mywork1/</link>
-      <pubDate>Wed, 29 Jun 2022 18:27:50 +0900</pubDate>
-      
-      <guid>https:originalkyu.github.io/myworks/mywork1/</guid>
-      <description></description>
     </item>
     
     <item>
