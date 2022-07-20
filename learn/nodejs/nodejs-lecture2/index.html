@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+<title>Nodejs Lecture2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="NPM Node.js 프로젝트를 관리하는 필수적인 도구이다. 온라인 저장소와 커맨드라인 도구로 구성 NPM 온라인 저장소 수많은 오픈소스 라이브러리와 도구들이 업로드되는 저장소 거대한 생태계를 보유하고 있고, 필요한 라이브러리나 도구를 손쉽게 검색 가능 커맨드라인 도구 프로젝트 관리를 위한 다양한 명령어를 제공 저장소에서 라이브러리, 도구 설치 프로젝트 설정/관리 프로젝트 의존성 관리 NPM 실행 프로젝트 생성하기 npm init 프로젝트 디렉터리를 생성하고, 해당 디렉터리 안에서 npm init 명령어를 사용한다 실습 1. 디렉토리를 만들어서 이동한다 2. npm init 3.">
+<link rel="canonical" href="https:originalkyu.github.io/learn/nodejs/nodejs-lecture2/" />
+
+<link rel="stylesheet" href="/css/originalkyu.css">
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+    <nav class="navbar">
+            <a href="/post/">
+                <img src= "/images/jooglorylogo.png" alt="JooGlory Snapshot logo">
+            </a>
+    </nav>
+</header>
+		<main class="wrapper">
+			
+
+<article>
+    <h2 id="npm">NPM</h2>
+<ul>
+<li>Node.js 프로젝트를 관리하는 필수적인 도구이다.</li>
+<li>온라인 저장소와 커맨드라인 도구로 구성</li>
+</ul>
+<h4 id="npm-온라인-저장소">NPM 온라인 저장소</h4>
+<ul>
+<li>수많은 오픈소스 라이브러리와 도구들이 업로드되는 저장소</li>
+<li>거대한 생태계를 보유하고 있고, 필요한 라이브러리나 도구를 손쉽게 검색 가능</li>
+</ul>
+<h4 id="커맨드라인-도구">커맨드라인 도구</h4>
+<ul>
+<li>프로젝트 관리를 위한 다양한 명령어를 제공</li>
+<li>저장소에서 라이브러리, 도구 설치</li>
+<li>프로젝트 설정/관리</li>
+<li>프로젝트 의존성 관리</li>
+</ul>
+<h2 id="npm-실행">NPM 실행</h2>
+<h4 id="프로젝트-생성하기">프로젝트 생성하기</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">init</span>
+</span></span></code></pre></div><ul>
+<li>프로젝트 디렉터리를 생성하고, 해당 디렉터리 안에서 npm init 명령어를 사용한다</li>
+</ul>
+<hr>
+<h2 id="실습">실습</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span><span style="color:#ae81ff">1.</span> <span style="color:#a6e22e">디렉토리를</span> <span style="color:#a6e22e">만들어서</span> <span style="color:#a6e22e">이동한다</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2.</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">init</span> 
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3.</span> <span style="color:#a6e22e">전부</span> <span style="color:#a6e22e">엔터를</span> <span style="color:#a6e22e">눌러서</span> <span style="color:#a6e22e">기본</span> <span style="color:#a6e22e">설정을</span> <span style="color:#a6e22e">함</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4.</span> <span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5.</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">dayjs</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6.</span> <span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span> <span style="color:#75715e">// dayjs 를 확인할 수 있다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">7.</span> <span style="color:#a6e22e">ls</span> <span style="color:#a6e22e">node_modules</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8.</span> <span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">package</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lock</span>.<span style="color:#a6e22e">json</span> <span style="color:#75715e">// dependency를 확인할 수 있다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">9.</span> <span style="color:#a6e22e">rm</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">r</span> <span style="color:#a6e22e">node_modules</span><span style="color:#f92672">/</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">10.</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#75715e">// 삭제한 모듈이 다시 설치된다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">11.</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#a6e22e">cowsay</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span><span style="color:#f92672">-</span><span style="color:#a6e22e">dev</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">12.</span> <span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span> <span style="color:#75715e">// devDependencies가 추가된 것을 확인할 수 있다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">13.</span> <span style="color:#a6e22e">ls</span> <span style="color:#a6e22e">node_modules</span><span style="color:#f92672">/</span> <span style="color:#75715e">// cowsay 뿐만이 아니라 다양한 패키지가 추가되었음을 확인할 수 있다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">14.</span> <span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">package</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lock</span>.<span style="color:#a6e22e">json</span> <span style="color:#75715e">// 많은 패키지가 추가된 것을 확인 가능하다. cowsay를 찾아보면 다양한 모듈을 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 요구하고 있는데, 그 모듈들은 다시 다른 모듈을 필요로하기 때문이다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">15.</span> <span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span> <span style="color:#75715e">// scripts 에 아직 test가 정의되지 않았음을 확인할 수 있다
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">16.</span> <span style="color:#a6e22e">vi</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span> <span style="color:#a6e22e">하고</span>, <span style="color:#a6e22e">scripts에</span> <span style="color:#e6db74">&#34;say-hi&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;cowsay\&#34;HI|&#34;</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#a6e22e">추가한다</span>.
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// test에서 줄바꿈하기 전에 , 를 넣는 것에 주의
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">17.</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">say</span><span style="color:#f92672">-</span><span style="color:#a6e22e">hi를</span> <span style="color:#a6e22e">하여</span> <span style="color:#a6e22e">실행할</span> <span style="color:#a6e22e">수</span> <span style="color:#a6e22e">있다</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">18.</span> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">remove</span> <span style="color:#a6e22e">cowsay</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">19.</span> <span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">package</span>.<span style="color:#a6e22e">json</span> <span style="color:#75715e">// devDependecies가 비어있는 것을 확인 가능
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#ae81ff">20.</span> <span style="color:#a6e22e">ls</span> <span style="color:#a6e22e">node_modules</span> <span style="color:#75715e">// cowsay 패키지 뿐만이 아니라 cowsay가 의존하던 패키지들도 전부 삭제된 것을 확인 가능
+</span></span></span></code></pre></div>
+</article>
+
+
+
+		</main>
+		
+		
+	</div>
+</body>
+
+</html>
